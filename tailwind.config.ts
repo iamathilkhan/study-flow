@@ -24,8 +24,9 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         
-        // SmartStudyPlanner Colors
-        "deep-navy": "hsl(var(--deep-navy))",
+        // Muted Color System
+        "deep-charcoal": "hsl(var(--deep-charcoal))",
+        "deep-navy": "hsl(var(--deep-charcoal))",
         "slate-dark": "hsl(var(--slate-dark))",
         "slate-mid": "hsl(var(--slate-mid))",
         "slate-light": "hsl(var(--slate-light))",
@@ -35,18 +36,35 @@ export default {
         "soft-white": "hsl(var(--soft-white))",
         "pure-white": "hsl(var(--pure-white))",
         
-        "emerald": "hsl(var(--emerald))",
-        "emerald-glow": "hsl(var(--emerald-glow))",
-        "emerald-dim": "hsl(var(--emerald-dim))",
+        // Warm Taupe Primary
+        "taupe": "hsl(var(--taupe))",
+        "taupe-glow": "hsl(var(--taupe-glow))",
+        "taupe-dim": "hsl(var(--taupe-dim))",
         
-        "violet": "hsl(var(--violet))",
-        "violet-glow": "hsl(var(--violet-glow))",
+        // Legacy emerald mappings (now taupe)
+        "emerald": "hsl(var(--taupe))",
+        "emerald-glow": "hsl(var(--taupe-glow))",
+        "emerald-dim": "hsl(var(--taupe-dim))",
         
-        "amber": "hsl(var(--amber))",
-        "amber-glow": "hsl(var(--amber-glow))",
+        // Muted Sage
+        "sage": "hsl(var(--sage))",
+        "sage-glow": "hsl(var(--sage-glow))",
         
-        "rose": "hsl(var(--rose))",
-        "rose-glow": "hsl(var(--rose-glow))",
+        // Legacy violet mappings (now sage)
+        "violet": "hsl(var(--sage))",
+        "violet-glow": "hsl(var(--sage-glow))",
+        
+        // Muted Amber
+        "muted-amber": "hsl(var(--muted-amber))",
+        "muted-amber-glow": "hsl(var(--muted-amber-glow))",
+        "amber": "hsl(var(--muted-amber))",
+        "amber-glow": "hsl(var(--muted-amber-glow))",
+        
+        // Dusty Rose
+        "dusty-rose": "hsl(var(--dusty-rose))",
+        "dusty-rose-glow": "hsl(var(--dusty-rose-glow))",
+        "rose": "hsl(var(--dusty-rose))",
+        "rose-glow": "hsl(var(--dusty-rose-glow))",
 
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -115,8 +133,8 @@ export default {
           "100%": { transform: "translateX(0)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 24px hsl(160 84% 39% / 0.25)" },
-          "50%": { boxShadow: "0 0 40px hsl(160 84% 39% / 0.4)" },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(30 18% 45% / 0.2)" },
+          "50%": { boxShadow: "0 0 32px hsl(30 18% 45% / 0.3)" },
         },
         "scale-in": {
           "0%": { transform: "scale(0.95)", opacity: "0" },
