@@ -6,32 +6,46 @@
 
 @layer base {
   :root {
-    /* SmartStudyPlanner Color System */
-    --deep-navy: 222 47% 11%;
-    --slate-dark: 217 33% 17%;
-    --slate-mid: 215 25% 27%;
-    --slate-light: 215 19% 35%;
-    --cool-gray: 215 20% 65%;
-    --ice-white: 214 32% 91%;
-    --pearl: 210 40% 96%;
-    --soft-white: 210 40% 96%;
-    --pure-white: 0 0% 100%;
+    /* Muted & Subtle Color System */
+    --deep-charcoal: 0 0% 10%;
+    --slate-dark: 0 0% 14%;
+    --slate-mid: 0 0% 22%;
+    --slate-light: 0 0% 32%;
+    --cool-gray: 0 0% 55%;
+    --ice-white: 30 5% 85%;
+    --pearl: 30 8% 92%;
+    --soft-white: 30 6% 95%;
+    --pure-white: 30 10% 98%;
 
-    --emerald: 160 84% 39%;
-    --emerald-glow: 160 73% 52%;
-    --emerald-dim: 161 94% 30%;
+    /* Warm Taupe Primary */
+    --taupe: 30 18% 45%;
+    --taupe-glow: 30 20% 55%;
+    --taupe-dim: 30 16% 35%;
 
-    --violet: 258 90% 66%;
-    --violet-glow: 258 89% 76%;
+    /* Muted Accents */
+    --sage: 150 12% 42%;
+    --sage-glow: 150 14% 52%;
 
-    --amber: 38 92% 50%;
-    --amber-glow: 45 93% 56%;
+    --dusty-rose: 350 18% 55%;
+    --dusty-rose-glow: 350 22% 65%;
 
-    --rose: 350 89% 60%;
-    --rose-glow: 351 94% 71%;
+    --muted-amber: 38 30% 50%;
+    --muted-amber-glow: 38 35% 60%;
+
+    /* Legacy color mappings for compatibility */
+    --deep-navy: var(--deep-charcoal);
+    --emerald: var(--taupe);
+    --emerald-glow: var(--taupe-glow);
+    --emerald-dim: var(--taupe-dim);
+    --violet: var(--sage);
+    --violet-glow: var(--sage-glow);
+    --amber: var(--muted-amber);
+    --amber-glow: var(--muted-amber-glow);
+    --rose: var(--dusty-rose);
+    --rose-glow: var(--dusty-rose-glow);
 
     /* Semantic tokens */
-    --background: var(--deep-navy);
+    --background: var(--deep-charcoal);
     --foreground: var(--pure-white);
 
     --card: var(--slate-dark);
@@ -40,35 +54,35 @@
     --popover: var(--slate-dark);
     --popover-foreground: var(--pure-white);
 
-    --primary: var(--emerald);
+    --primary: var(--taupe);
     --primary-foreground: var(--pure-white);
 
-    --secondary: var(--violet);
+    --secondary: var(--sage);
     --secondary-foreground: var(--pure-white);
 
     --muted: var(--slate-mid);
     --muted-foreground: var(--cool-gray);
 
-    --accent: var(--violet);
+    --accent: var(--sage);
     --accent-foreground: var(--pure-white);
 
-    --destructive: var(--rose);
+    --destructive: var(--dusty-rose);
     --destructive-foreground: var(--pure-white);
 
-    --border: 215 25% 27% / 0.5;
+    --border: 0 0% 22% / 0.5;
     --input: var(--slate-mid);
-    --ring: var(--emerald);
+    --ring: var(--taupe);
 
     --radius: 0.5rem;
 
     --sidebar-background: var(--slate-dark);
     --sidebar-foreground: var(--cool-gray);
-    --sidebar-primary: var(--emerald);
+    --sidebar-primary: var(--taupe);
     --sidebar-primary-foreground: var(--pure-white);
     --sidebar-accent: var(--slate-mid);
     --sidebar-accent-foreground: var(--pure-white);
-    --sidebar-border: 215 25% 27% / 0.3;
-    --sidebar-ring: var(--emerald);
+    --sidebar-border: 0 0% 22% / 0.3;
+    --sidebar-ring: var(--taupe);
   }
 }
 
@@ -92,7 +106,7 @@
   .glass-card {
     @apply backdrop-blur-xl border rounded-xl;
     background: hsl(var(--slate-dark) / 0.6);
-    border-color: hsl(var(--cool-gray) / 0.15);
+    border-color: hsl(var(--cool-gray) / 0.12);
   }
 
   .glass-card-hover {
@@ -101,38 +115,38 @@
 
   .glass-card-hover:hover {
     background: hsl(var(--slate-dark) / 0.8);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
     transform: translateY(-2px);
   }
 
   /* Gradient Backgrounds */
   .gradient-hero {
-    background: linear-gradient(135deg, hsl(var(--deep-navy)) 0%, hsl(var(--slate-dark)) 50%, hsl(270 50% 15%) 100%);
+    background: linear-gradient(135deg, hsl(var(--deep-charcoal)) 0%, hsl(var(--slate-dark)) 50%, hsl(var(--slate-mid)) 100%);
   }
 
   .gradient-card-glow {
-    background: linear-gradient(135deg, hsl(var(--emerald) / 0.08), hsl(var(--violet) / 0.08));
+    background: linear-gradient(135deg, hsl(var(--taupe) / 0.06), hsl(var(--sage) / 0.06));
   }
 
   .gradient-cta {
-    background: linear-gradient(135deg, hsl(var(--emerald)), hsl(var(--emerald-dim)));
+    background: linear-gradient(135deg, hsl(var(--taupe)), hsl(var(--taupe-dim)));
   }
 
   .gradient-accent-bar {
-    background: linear-gradient(90deg, hsl(var(--emerald)), hsl(var(--violet)), hsl(var(--amber)));
+    background: linear-gradient(90deg, hsl(var(--taupe)), hsl(var(--sage)), hsl(var(--muted-amber)));
   }
 
-  /* Glow Shadows */
+  /* Glow Shadows - more subtle */
   .glow-emerald {
-    box-shadow: 0 0 24px hsl(var(--emerald) / 0.25);
+    box-shadow: 0 0 20px hsl(var(--taupe) / 0.2);
   }
 
   .glow-violet {
-    box-shadow: 0 0 24px hsl(var(--violet) / 0.25);
+    box-shadow: 0 0 20px hsl(var(--sage) / 0.2);
   }
 
   .glow-emerald-hover:hover {
-    box-shadow: 0 0 32px hsl(var(--emerald) / 0.4);
+    box-shadow: 0 0 28px hsl(var(--taupe) / 0.3);
   }
 
   /* Button Variants */
@@ -141,15 +155,15 @@
   }
 
   .btn-primary:hover {
-    @apply scale-[1.03] glow-emerald;
+    @apply scale-[1.02] glow-emerald;
   }
 
   .btn-secondary {
-    @apply bg-transparent border border-emerald text-emerald font-semibold px-6 py-3 rounded-lg transition-all duration-150;
+    @apply bg-transparent border border-primary text-primary font-semibold px-6 py-3 rounded-lg transition-all duration-150;
   }
 
   .btn-secondary:hover {
-    @apply bg-emerald/10;
+    @apply bg-primary/10;
   }
 
   .btn-ghost {
@@ -167,33 +181,33 @@
 
   /* Input Styles */
   .input-dark {
-    @apply bg-slate-dark border border-slate-mid/50 text-white placeholder:text-slate-light rounded-lg px-4 py-3 transition-all duration-200;
+    @apply bg-slate-dark border border-slate-mid/50 text-foreground placeholder:text-slate-light rounded-lg px-4 py-3 transition-all duration-200;
   }
 
   .input-dark:focus {
-    @apply border-emerald ring-2 ring-emerald/20 outline-none;
+    @apply border-primary ring-2 ring-primary/20 outline-none;
   }
 
   /* Badge Variants */
   .badge-emerald {
-    @apply bg-emerald/20 text-emerald-glow px-3 py-1 rounded-full text-xs font-medium;
+    @apply bg-primary/20 text-taupe-glow px-3 py-1 rounded-full text-xs font-medium;
   }
 
   .badge-violet {
-    @apply bg-violet/20 text-violet-glow px-3 py-1 rounded-full text-xs font-medium;
+    @apply bg-secondary/20 text-sage-glow px-3 py-1 rounded-full text-xs font-medium;
   }
 
   .badge-amber {
-    @apply bg-amber/20 text-amber-glow px-3 py-1 rounded-full text-xs font-medium;
+    @apply bg-muted-amber/20 text-muted-amber-glow px-3 py-1 rounded-full text-xs font-medium;
   }
 
   .badge-rose {
-    @apply bg-rose/20 text-rose-glow px-3 py-1 rounded-full text-xs font-medium;
+    @apply bg-dusty-rose/20 text-dusty-rose-glow px-3 py-1 rounded-full text-xs font-medium;
   }
 
   /* Sidebar Active State */
   .sidebar-link-active {
-    @apply bg-emerald/10 text-white border-l-2 border-emerald;
+    @apply bg-primary/10 text-foreground border-l-2 border-primary;
   }
 }
 
